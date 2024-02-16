@@ -64,7 +64,7 @@ function App() {
         ref={el}
       >
         <Navbar />
-        <div>
+        <div className="max-lg:hidden">
           {dataSkillBlob.map((blob, index) => {
             return (
               <DragSkills
@@ -78,11 +78,11 @@ function App() {
           })}
         </div>
         <div className="min-h-[calc(100vh-120px)] flex justify-center flex-col items-center ">
-          <h1 className="font-extrabold text-[60px] uppercase flex gap-x-5 overflow-hidden">
+          <h1 className="font-extrabold text-[60px] uppercase flex gap-x-5 overflow-hidden max-md:text-4xl max-sm:text-xl">
             <StaggeredText text="Fullstack" delay={0} />
             <StaggeredText text="Javascript" delay={0.5} />
           </h1>
-          <p className="max-w-[400px] text-center font-poppins">
+          <p className="max-w-[400px] text-center font-poppins max-md:text-sm ">
             I'm a Indonesian-Based Fullstack Javascript using React.JS and
             Nodejs
           </p>

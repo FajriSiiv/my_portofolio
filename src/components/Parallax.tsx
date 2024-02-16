@@ -26,7 +26,7 @@ const AllSkill = () => {
 
   return (
     <div ref={containerRef}>
-      <animated.div style={parallaxStyle} className="w-[400px]">
+      <animated.div style={parallaxStyle} className="w-[300px]">
         <AllTheSkill />
       </animated.div>
     </div>

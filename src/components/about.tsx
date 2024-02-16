@@ -22,7 +22,7 @@ const About = () => {
       <h2 className="text-3xl font-extrabold mb-5 uppercase">About me</h2>
 
       <div className="grid grid-cols-6 grid-rows-6 gap-3 max-lg:flex max-lg:flex-col">
-        <div className="col-start-1 col-end-4 row-start-1 row-end-4 bg-slate-200  overflow-hidden p-4 rounded-md ">
+        <div className="col-start-1 col-end-4 row-start-1 row-end-4 bg-slate-200  overflow-hidden p-4 rounded-md">
           <FirstGrid />
         </div>
         <div className="col-start-4 col-end-7 row-start-1 row-end-4  bg-slate-200  overflow-hidden p-4 rounded-md ">
@@ -63,13 +63,17 @@ export const LinkMe = ({ icon, text, linkUrl }: any) => {
 const FirstGrid = () => {
   return (
     <div className="p-7 flex flex-col h-[300px] justify-center relative">
-      <PiHandFistFill className="h-20 w-20" />
-      <span className="text-3xl font-bold mt-2 mb-3">All the Projects</span>
-      <p className="w-1/2 leading-relaxed">
-        Get a snap shot of my project. Some project's took months, some took
-        weeks, some took days.
-      </p>
-      <div className="absolute -top-40 -right-16">
+      <div className="z-10 max-lg:flex max-lg:flex-col max-lg:items-center ">
+        <PiHandFistFill className="h-20 w-20" />
+        <span className="text-3xl font-bold mt-2 mb-3 max-sm:text-center">
+          All the Projects
+        </span>
+        <p className="w-1/2 max-lg:w-5/6 leading-relaxed  max-lg:text-center">
+          Get a snap shot of my project. Some project's took months, some took
+          weeks, some took days.
+        </p>
+      </div>
+      <div className="absolute -top-40 -right-40 max-sm:hidden">
         <AllSkill />
       </div>
     </div>
@@ -79,20 +83,22 @@ const FirstGrid = () => {
 const SecondGrid = () => {
   const CardSkill = ({ text }: any) => {
     return (
-      <span className="py-2 px-5 bg-slate-600 text-slate-100 font-bold rounded-md ">
+      <span className="py-2 px-5 bg-slate-600 text-slate-100 font-bold rounded-md max-md:py-1 max-md:px-3 max-md:text-sm max-md:font-semibold">
         {text}
       </span>
     );
   };
 
   return (
-    <div className="p-7 flex flex-col h-[300px] justify-center relative ">
-      <div className="absolute -top-10 -right-16 ">
+    <div className="p-7 flex flex-col h-[300px] justify-center relative max-lg:h-fit">
+      <div className="absolute top-32 -right-40 max-sm:hidden ">
         <AllSkill />
       </div>
-      <FaKeyboard className="h-20 w-20" />
-      <span className="text-3xl font-bold mt-2 mb-3">All Skills</span>
-      <div className="flex flex-wrap gap-2 w-5/6 z-10">
+      <FaKeyboard className="h-20 w-20 max-lg:m-auto" />
+      <span className="text-3xl font-bold mt-2 mb-3 max-lg:text-center">
+        All Skills
+      </span>
+      <div className="flex flex-wrap gap-2 w-5/6 z-10 items-center justify-center max-md:w-full">
         <CardSkill text="ReactJS" />
         <CardSkill text="NEXT.JS" />
         <CardSkill text="Node.JS" />
@@ -112,7 +118,9 @@ const SmallGrid = () => {
   return (
     <div className="p-4 flex flex-col h-[300px] justify-center items-center relative">
       <TbError404 className="h-20 w-20" />
-      <span className="text-3xl font-bold mt-2 mb-2">Solving Problem</span>
+      <span className="text-3xl font-bold mt-2 mb-2 text-center">
+        Solving Problem
+      </span>
       <p className="w-5/6 leading-normal text-center">
         Solving problems by searching on Google and community forums.
       </p>
@@ -148,32 +156,32 @@ const ThirdSmallGrid = () => {
 
 export const AllTheSkill = () => {
   return (
-    <div className={`grid grid-rows-3 grid-cols-3 gap-4 `}>
-      <div className="h-24 w1h-24 rounded-sm">
+    <div className={`grid grid-rows-3 grid-cols-3 gap-2 `}>
+      <div className="h-16 w-16 rounded-sm">
         <FaReact className="w-full h-full" />
       </div>
-      <div className="h-24 w1h-24 rounded-sm">
+      <div className="h-16 w-16 rounded-sm">
         <TbBrandNextjs className="w-full h-full" />
       </div>
-      <div className="h-24 w1h-24 rounded-sm">
+      <div className="h-16 w-16 rounded-sm">
         <FaNodeJs className="w-full h-full" />
       </div>
-      <div className="h-24 w1h-24 rounded-sm">
+      <div className="h-16 w-16 rounded-sm">
         <PiFigmaLogo className="w-full h-full" />
       </div>
-      <div className="h-24 w1h-24 rounded-sm">
+      <div className="h-16 w-16 rounded-sm">
         <SiTailwindcss className="w-full h-full" />
       </div>
-      <div className="h-24 w1h-24 rounded-sm">
+      <div className="h-16 w-16 rounded-sm">
         <SiMysql className="w-full h-full" />
       </div>
-      <div className="h-24 w1h-24 rounded-sm">
+      <div className="h-16 w-16 rounded-sm">
         <SiMongodb className="w-full h-full" />
       </div>
-      <div className="h-24 w1h-24 rounded-sm">
+      <div className="h-16 w-16 rounded-sm">
         <FaHtml5 className="w-full h-full" />
       </div>
-      <div className="h-24 w1h-24 rounded-sm">
+      <div className="h-16 w-16 rounded-sm">
         <FaCss3 className="w-full h-full" />
       </div>
     </div>
